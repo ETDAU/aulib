@@ -3,9 +3,19 @@ The AU’s library of R functions
 
 R package for MLITSD’s Analytics Units.
 
-# Functions
+## Installation
 
-## `au_palette()`
+Install the most updated version using `remotes::install_github()`
+
+    remotes::install_github("ETDAU/aulib")
+
+Or, a source package using `devtools::install_github()`
+
+    devtools::install_github("https://github.com/ETDAU/aulib/releases/tag/v0.0.0.9000")
+
+## Functions
+
+### `au_palette()`
 
 `au_palette()` provides a palette of accessible colours that are
 recommended by the [OPS](https://intra.ontario.ca/tbs/ontario-logo)
@@ -13,16 +23,20 @@ recommended by the [OPS](https://intra.ontario.ca/tbs/ontario-logo)
 (`palette = "au"`).
 
 ``` r
-# create a fake data 
-data.frame(x = rnorm(n = 60),
-           y = rnorm(n = 60),
-           w = as.factor(rep(LETTERS[1:6], times = 10))) %>%
-  # plot 
-  ggplot(aes(x = x,
-             y = y,
-             colour = w)) +
-  geom_point() +
-  scale_color_manual(values = au_palette(palette = "au")) +
+# create fake data 
+tibble(w = sample(LETTERS[1:6], size = 100, replace = T)) %>%
+  count(w) %>% 
+  # create a bar graph with the fake data  
+  ggplot(aes(x = w,
+             y = n,
+             fill = w)) +
+  geom_bar(stat = "identity",
+           position = position_dodge(.8)) + 
+  scale_fill_manual(guide = "none",
+                    # using AU palette (Or leave the argument blank; `au_palette()`)
+                    values = au_palette(palette = "au")) +
+  scale_y_continuous("Count") +
+  scale_x_discrete("") + 
   theme_classic()
 ```
 
@@ -31,7 +45,7 @@ data.frame(x = rnorm(n = 60),
 You can use both `ops` and `au` palettes by leaving the argument empty:
 `au_palette()`.
 
-## `make_ca_connection()`
+### `make_ca_connection()`
 
 `make_ca_connection()` creates a connection object using an ODBC driver
 with the log-in credentials saved as the system environment variables as
@@ -41,7 +55,7 @@ your `.Renviron`, check this
 
     con = make_ca_connection()
 
-## `rm_dup_response()`
+### `rm_dup_response()`
 
 `rm_dup_response()` is a helper function for cleaning duplicated
 responses that are concatenated (e.g., “yes, yes”).
@@ -62,7 +76,7 @@ tibble(duplicated_response = c("yes, yes", "no", "yes, no", "YES, yes")) %>%
     3 yes, no             yes, no       
     4 YES, yes            yes           
 
-## `binary_to_numeric()`
+### `binary_to_numeric()`
 
 `binary_to_numeric()` converts “yes” and “no” responses to numeric
 values of 1 and 0, respectively.
@@ -78,14 +92,14 @@ tibble(binary_response = c(sample(c("yes", "no"), 6, replace = TRUE), "YES")) %>
       binary_response numeric_response
       <chr>                      <int>
     1 no                             0
-    2 no                             0
+    2 yes                            1
     3 yes                            1
     4 no                             0
-    5 no                             0
-    6 no                             0
+    5 yes                            1
+    6 yes                            1
     7 YES                            1
 
-## `clean_query()`
+### `clean_query()`
 
 `clean_query()` is a function created by [Tori
 Oblad](https://stackoverflow.com/a/58446028) that facilitates importing
