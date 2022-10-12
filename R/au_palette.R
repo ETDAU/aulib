@@ -45,9 +45,6 @@
 #' au_palette(colour = c("maroon", "blue"))
 #'
 
-
-
-
 au_palette = function(colour, palette = TRUE) {
 
   # create a table with the colour and their hex-codes ------
