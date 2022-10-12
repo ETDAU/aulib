@@ -48,14 +48,19 @@ responses that are concatenated (e.g., “yes, yes”).
 
 ``` r
 # create a vector of strings with some duplicated responses
-duplicated_response = c("yes, yes", "no", "yes, no")
+tibble(duplicated_response = c("yes, yes", "no", "yes, no", "YES, yes")) %>% 
+  # apply `rm_dup_responses()` to clean the duplicated_response column  
+  mutate(clean_response = rm_dup_responses(duplicated_response, 
+                                           sep = ","))
 ```
 
-``` r
-rm_dup_responses(response = duplicated_response, sep = ",")
-```
-
-    ## [1] "yes"     "no"      "yes, no"
+    # A tibble: 4 × 2
+      duplicated_response clean_response
+      <chr>               <chr>         
+    1 yes, yes            yes           
+    2 no                  no            
+    3 yes, no             yes, no       
+    4 YES, yes            yes           
 
 ## `binary_to_numeric()`
 
@@ -64,14 +69,21 @@ values of 1 and 0, respectively.
 
 ``` r
 # create a string of binary responses
-response = c(sample(c("yes", "no"), 6, replace = TRUE), "YES")
+tibble(binary_response = c(sample(c("yes", "no"), 6, replace = TRUE), "YES")) %>% 
+  # apply `binary_to_numeric()` to convert into numeric values 
+  mutate(numeric_response = binary_to_numeric(binary_response))
 ```
 
-``` r
-binary_to_numeric(response)
-```
-
-    ## [1] 0 0 0 1 1 0 1
+    # A tibble: 7 × 2
+      binary_response numeric_response
+      <chr>                      <int>
+    1 no                             0
+    2 no                             0
+    3 yes                            1
+    4 no                             0
+    5 no                             0
+    6 no                             0
+    7 YES                            1
 
 ## `clean_query()`
 

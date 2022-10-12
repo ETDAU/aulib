@@ -4,7 +4,7 @@ output: github_document
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_chunk$set(echo = TRUE, comment = "")
 
 library(tidyverse)
 library(ggplot2)
@@ -49,12 +49,10 @@ con = make_ca_connection()
 
 ```{r}
 # create a vector of strings with some duplicated responses
-duplicated_response = c("yes, yes", "no", "yes, no")
-```
-
-
-```{r}
-rm_dup_responses(response = duplicated_response, sep = ",")
+tibble(duplicated_response = c("yes, yes", "no", "yes, no", "YES, yes")) %>% 
+  # apply `rm_dup_responses()` to clean the duplicated_response column  
+  mutate(clean_response = rm_dup_responses(duplicated_response, 
+                                           sep = ","))
 ```
 
 
@@ -64,15 +62,16 @@ rm_dup_responses(response = duplicated_response, sep = ",")
 
 ```{r}
 # create a string of binary responses
-response = c(sample(c("yes", "no"), 6, replace = TRUE), "YES")
-```
-
-
-```{r}
-binary_to_numeric(response)
+tibble(binary_response = c(sample(c("yes", "no"), 6, replace = TRUE), "YES")) %>% 
+  # apply `binary_to_numeric()` to convert into numeric values 
+  mutate(numeric_response = binary_to_numeric(binary_response))
 ```
 
 
 ## `clean_query()`    
 `clean_query()` is a function created by [Tori Oblad](https://stackoverflow.com/a/58446028) that facilitates importing `.sql` queries into R by removing comment lines and line breaks from queries. 
+
+
+
+
   
