@@ -20,3 +20,6 @@ Creates a connection object using an ODBC driver with the log-in credentials sav
 make_ca_connection(dsn = "CDR")
 
 }
+\author{
+Jill Dilts, \email{jill.dilts@ontario.ca}
+}

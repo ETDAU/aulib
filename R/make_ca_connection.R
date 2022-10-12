@@ -7,6 +7,8 @@
 #' @return a connection object to Centralized Data Repository
 #' @export
 #'
+#' @author Jill Dilts, \email{jill.dilts@ontario.ca}
+#'
 #' @examples make_ca_connection(dsn = "CDR")
 #'
 

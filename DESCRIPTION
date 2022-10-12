@@ -15,6 +15,7 @@ Imports:
     ggplot2,
     magrittr,
     odbc,
+    readr,
     rstudioapi,
     stringr
 Suggests: 
