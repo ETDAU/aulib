@@ -11,12 +11,15 @@
 
 binary_to_numeric = function(response) {
 
-  if ( length(unique(tolower(response))) > 2 ) {
+
+  yn_test = grepl("\\bno\\b|\\byes\\b",
+                  unique(response),
+                  ignore.case = TRUE)
+
+  if ( length(which(yn_test == FALSE)) > 0 ) {
 
 
-    wrong_values = unique(response)[-grepl("\\bno\\b|\\byes\\b",
-                            unique(response),
-                            ignore.case = TRUE)]
+    wrong_values = unique(response)[!yn_test]
 
     warning("Please make sure all responses are either yes or no. ",
             paste(wrong_values, collapse = ", "), " were re-coded as NA.")
@@ -24,9 +27,10 @@ binary_to_numeric = function(response) {
   }
 
 
-  dplyr::case_when( grepl( "no", response, ignore.case = TRUE) ~ 0L,
-                    grepl( "yes", response, ignore.case = TRUE) ~ 1L,
+  response = dplyr::case_when( grepl( "\\bno\\b", response, ignore.case = TRUE) ~ 0L,
+                    grepl( "\\byes\\b", response, ignore.case = TRUE) ~ 1L,
                     TRUE ~ NA_integer_)
 
+  return(response)
 
 }
