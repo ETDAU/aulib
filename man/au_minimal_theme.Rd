@@ -12,3 +12,6 @@ a ggplot theme for the AU
 \description{
 AU's ggplot theme
 }
+\examples{
+inst/examples/ex-theme_au_minimal.R
+}

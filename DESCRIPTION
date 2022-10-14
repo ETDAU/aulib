@@ -12,6 +12,7 @@ RoxygenNote: 7.2.1
 Imports: 
     dplyr,
     ggplot2,
+    janitor,
     magrittr,
     odbc,
     readr,

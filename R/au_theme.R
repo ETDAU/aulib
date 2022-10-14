@@ -1,6 +1,5 @@
 #' AU's ggplot theme
 #'
-#' @inheritParams ggplot2::theme_minimal
 #'
 #' @return a ggplot theme for the AU
 #' @export
@@ -10,7 +9,7 @@
 au_minimal_theme = function() {
 
 
-  theme_minimal() %+replace%
+  ggplot2::theme_minimal() %+replace%
 
   ggplot2::theme(
 
