@@ -3,7 +3,7 @@ library(ggplot2)
 
 table(sample(LETTERS[1:6],
                size = 100,
-               replace = T)) %>%
+               replace = TRUE)) %>%
     as.data.frame() %>%
   # create a bar graph with the fake data
   ggplot(aes(x = Var1,

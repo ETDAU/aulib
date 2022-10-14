@@ -1,11 +1,12 @@
 #' AU's ggplot theme
 #'
+#' @importFrom ggplot2 '%+replace%' element_text element_blank
 #'
 #' @return a ggplot theme for the AU
 #' @export
 #'
 #'
-#' @examples inst/examples/ex-theme_au_minimal.R
+#' @example inst/examples/ex-theme_au_minimal.R
 au_minimal_theme = function() {
 
 
@@ -14,16 +15,16 @@ au_minimal_theme = function() {
   ggplot2::theme(
 
     # title
-    plot.title = element_text(size = rel(1.5),
+    plot.title = element_text(size = 16,
                               face = "bold",
                               hjust = 0),        # left aligned
 
-    plot.subtitle = element_text(size = rel(1.25)),
+    plot.subtitle = element_text(size = 14),
 
 
-    axis.text = element_text(size = rel(1)),
+    axis.text = element_text(size = 12),
 
-    axis.title = element_text(size = rel(1.1),
+    axis.title = element_text(size = 13,
 
                               vjust = -1),
 

@@ -16,6 +16,7 @@ Imports:
     magrittr,
     odbc,
     readr,
+    rlang,
     rstudioapi,
     stringr
 Suggests: 
