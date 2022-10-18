@@ -23,3 +23,6 @@ d = data.frame(letters = sample(LETTERS[1:6], size = 100, replace = TRUE))
 num_pct(d, letters)
 
 }
+\author{
+Chris Ganowski, \email{chris.ganowski@ontario.ca}
+}
