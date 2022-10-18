@@ -16,9 +16,11 @@ Imports:
     magrittr,
     odbc,
     readr,
+    readxl,
     rlang,
     rstudioapi,
-    stringr
+    stringr,
+    tools
 Suggests: 
     knitr,
     rmarkdown,

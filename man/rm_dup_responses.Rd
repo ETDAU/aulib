@@ -18,8 +18,11 @@ a single response without a duplicate
 Removes repeated responses that are concatenated together (e.g., "yes, yes")
 by retaining only the first occurrence of the response
 }
+\note{
+deprecated; only evaluates one word at a time
+}
 \examples{
-duplicated_response = c("yes, yes", "no", "yes, no")
+duplicated_response = c("yes, YES", "no", "yes, no", "maybe true, Maybe true")
 rm_dup_responses(response = duplicated_response, sep = ",")
 
 }

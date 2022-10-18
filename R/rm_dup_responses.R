@@ -11,11 +11,12 @@
 #' @export
 #'
 #' @examples
-#' duplicated_response = c("yes, yes", "no", "yes, no")
+#' duplicated_response = c("yes, YES", "no", "yes, no", "maybe true, Maybe true")
 #' rm_dup_responses(response = duplicated_response, sep = ",")
 #'
 rm_dup_responses = function(response, sep = ",") {
 
+  #' @note deprecated; only evaluates one word at a time
   # stringr::str_replace_all(tolower(response),
   #                          paste0("\\b(\\w+)", sep, "\\s+\\1\\b"), # pattern of duplicated responses
   #                          "\\1") # replacing it with the first occurrence
@@ -28,7 +29,5 @@ rm_dup_responses = function(response, sep = ",") {
          response,
          perl = TRUE,
          ignore.case = TRUE)
-
-
 }
 

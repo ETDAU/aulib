@@ -1,9 +1,15 @@
 ^aulib\.Rproj$
 ^\.Rproj\.user$
+
+# readme files
 ^README\.Rmd$
+^README_files$
+
+# license
 ^LICENSE\.md$
 ^cran-comments\.md$
-^data-raw$
-^pkgdown$
-^_pkgdown\.yml$
+
+# ^data-raw$
+# ^pkgdown$
+# ^_pkgdown\.yml$
 ^\.github$
