@@ -66,7 +66,9 @@ con = make_ca_connection()
 
 ```{r}
 # create a vector of strings with some duplicated responses
-tibble(duplicated_response = c("yes, yes", "no", "yes, no", "YES, yes")) %>% 
+tibble(duplicated_response = c("yes, yes", "no", "yes, no", "YES, yes",
+                               "hello world, hello WORLD",
+                               "hello world, bye world")) %>% 
   # apply `rm_dup_responses()` to clean the duplicated_response column  
   mutate(clean_response = rm_dup_responses(duplicated_response, 
                                            sep = ","))
@@ -82,6 +84,56 @@ tibble(duplicated_response = c("yes, yes", "no", "yes, no", "YES, yes")) %>%
 tibble(binary_response = c(sample(c("yes", "no"), 6, replace = TRUE), "YES")) %>% 
   # apply `binary_to_numeric()` to convert into numeric values 
   mutate(numeric_response = binary_to_numeric(binary_response))
+```
+
+### `cross_validate()`   
+`cross_validate()` allows you to cross-validate recoding (e.g., dicotomizing, converting to numeric values) by comparing levels in the original and transformed columns side by side. 
+
+Create a fake data set with some columns and recode these columns.   
+```{r}
+(data =
+  data.frame(x = sample(c("yes", "no", "maybe"),
+                        100,
+                        replace = TRUE),
+             y = sample(LETTERS[1:5],
+                        size = 100,
+                        replace = TRUE),
+             z = sample(LETTERS,
+                        size = 100,
+                        replace = TRUE),
+             xy = sample(1:100,
+                         100)) %>%
+  #' transform variables 
+  mutate(x_yn = # dichotomize "x"
+           ifelse(x == "yes", 1,
+                       ifelse(x == "no", 0, NA)),
+         across(y, # convert "y" into numeric
+                ~case_when(. == "A" ~ 1L,
+                           . == "B" ~ 2L,
+                           . == "C" ~ 3L,
+                           . == "D" ~ 4L,
+                           . == "E" ~ 5L,
+                           TRUE ~ NA_integer_),
+                .names = "{.col}_num")))
+```
+
+To inspect whether/how the transformed levels correspond to the original levels, use `codebook = FALSE`:      
+```{r}
+data %>% 
+  # exclude untransformed columns
+  select(-c(z, xy)) %>% 
+  cross_validate(data = .,
+                 suffix = c("yn", "num"),
+                 codebook = FALSE)
+
+```
+
+To create a codebook with both original and transformed variables with their corresponding levels, use `codebook = TRUE`:    
+```{r}
+cross_validate(data,
+               suffix = c("yn", "num"),
+               codebook = TRUE)
+
 ```
 
 
