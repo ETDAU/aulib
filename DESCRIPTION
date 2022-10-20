@@ -15,11 +15,15 @@ Imports:
     janitor,
     magrittr,
     odbc,
+    purrr,
     readr,
     readxl,
     rlang,
     rstudioapi,
     stringr,
+    tibble,
+    tidyr,
+    tidyselect,
     tools
 Suggests: 
     knitr,
