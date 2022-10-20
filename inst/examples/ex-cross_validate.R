@@ -3,20 +3,21 @@ library(tidyverse)
 # create a fake data set with original columns (x & y) and their transformed columns (x_yn and y_num)
 data =
   data.frame(x = sample(c("yes", "no", "maybe"),
-                             100,
-                             replace = TRUE),
-                  y = sample(LETTERS[1:5],
-                             size = 100,
-                             replace = TRUE),
+                        100,
+                        replace = TRUE),
+             y = sample(LETTERS[1:5],
+                        size = 100,
+                        replace = TRUE),
              z = sample(LETTERS,
                         size = 100,
                         replace = TRUE),
              xy = sample(1:100,
                          100)) %>%
-  # apply some transformation
-  mutate(x_yn = ifelse(x == "yes", 1,
-                       ifelse(x == "no", 0, NA)),
-         across(y,
+  # apply transformation
+  mutate(x_yn =  # dichotomize "x"
+           ifelse(x == "yes", 1,
+                  ifelse(x == "no", 0, NA)),
+         across(y, # convert "y" into numeric
                 ~case_when(. == "A" ~ 1L,
                            . == "B" ~ 2L,
                            . == "C" ~ 3L,

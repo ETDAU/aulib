@@ -104,8 +104,8 @@ cross_validate = function(data,
     #' create a dataframe
     codebook =
       option_codebook %>%
-      purrr::keep( ~ncol(.data) > 1 ) %>%
-      purrr::map(dplyr::arrange_at, tidyselect::last_col()) %>%
+      purrr::keep( ~ncol(.x) > 1 ) %>%
+      purrr::map(dplyr::arrange_at, 2) %>%
       purrr::map(dplyr::select, tidyselect::last_col(), tidyselect::everything())
   }
 
