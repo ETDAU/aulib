@@ -105,8 +105,9 @@ cross_validate = function(data,
     option_dictionary =
       option_codebook %>%
       purrr::keep( ~ncol(.x) > 1 ) %>%
-      # purrr::map(dplyr::arrange_at, 2) %>%
-      purrr::map(dplyr::arrange, across(!where(is.character))) %>%
+      #' arranging by numeric values (in an increasing order)
+      purrr::map(dplyr::arrange, across(where(is.numeric))) %>%
+      #' re-ordering the columns for readability
       purrr::map(dplyr::select, tidyselect::last_col(), tidyselect::everything())
   }
 
