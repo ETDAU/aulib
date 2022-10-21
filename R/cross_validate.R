@@ -59,39 +59,39 @@ cross_validate = function(data,
                                              is.na)))
 
 
-  #' flattened codebook for the original columns
-  opt_original_columns =
-    option_codebook %>%
-    purrr::keep( ~ncol(.x) == 1 ) %>%
-    {tibble::tibble(
-      variable = purrr::map_chr(., ~colnames(.)),
-      response = purrr::map(., 1)
-    )}
-
-
-  #' flattened codebook for the transformed columns
-  opt_transformed_columns =
-    option_codebook %>%
-    purrr::keep( ~ncol(.x) > 1 ) %>%
-    #' numeric values and their corresponding labels
-    purrr::map(~{dplyr::group_by_at(.x, 2) %>%
-        dplyr::summarize_all(paste0, collapse = ", ") %>%
-        dplyr::ungroup() %>%
-        tidyr::unite("recoded",
-                     tidyselect::everything(),
-                     na.rm = TRUE,
-                     remove = FALSE,
-                     sep = " = ")}) %>%
-    {tibble::tibble(
-      variable = purrr::map_chr(., ~colnames(.)[2]),
-      response = purrr::map(., "recoded")
-    )}
-
   #' output
   if( codebook == TRUE) {
 
+    #' flattened codebook for the original columns
+    opt_original_columns =
+      option_codebook %>%
+      purrr::keep( ~ncol(.x) == 1 ) %>%
+      {tibble::tibble(
+        variable = purrr::map_chr(., ~colnames(.)),
+        response = purrr::map(., 1)
+      )}
+
+
+    #' flattened codebook for the transformed columns
+    opt_transformed_columns =
+      option_codebook %>%
+      purrr::keep( ~ncol(.x) > 1 ) %>%
+      #' numeric values and their corresponding labels
+      purrr::map(~{dplyr::group_by_at(.x, 2) %>%
+          dplyr::summarize_all(paste0, collapse = ", ") %>%
+          dplyr::ungroup() %>%
+          tidyr::unite("recoded",
+                       tidyselect::everything(),
+                       na.rm = TRUE,
+                       remove = FALSE,
+                       sep = " = ")}) %>%
+      {tibble::tibble(
+        variable = purrr::map_chr(., ~colnames(.)[2]),
+        response = purrr::map(., "recoded")
+      )}
+
     #' create a codebook with all the responses concatenated
-    codebook =
+    option_dictionary =
       list(opt_original_columns, opt_transformed_columns) %>%
       purrr::map_dfr(tidyr::unnest, response) %>%
       #' concatenate all the possible options
@@ -102,13 +102,14 @@ cross_validate = function(data,
   } else if( codebook == FALSE) {
 
     #' create a dataframe
-    codebook =
+    option_dictionary =
       option_codebook %>%
       purrr::keep( ~ncol(.x) > 1 ) %>%
-      purrr::map(dplyr::arrange_at, 2) %>%
+      # purrr::map(dplyr::arrange_at, 2) %>%
+      purrr::map(dplyr::arrange, across(!where(is.character))) %>%
       purrr::map(dplyr::select, tidyselect::last_col(), tidyselect::everything())
   }
 
 
-  return(codebook)
+  return(option_dictionary)
 }

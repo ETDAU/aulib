@@ -91,7 +91,7 @@ tibble(binary_response = c(sample(c("yes", "no"), 6, replace = TRUE), "YES")) %>
 
 Create a fake data set with some columns and recode these columns.   
 ```{r}
-(data =
+data =
   data.frame(x = sample(c("yes", "no", "maybe"),
                         100,
                         replace = TRUE),
@@ -114,7 +114,9 @@ Create a fake data set with some columns and recode these columns.
                            . == "D" ~ 4L,
                            . == "E" ~ 5L,
                            TRUE ~ NA_integer_),
-                .names = "{.col}_num")))
+                .names = "{.col}_num"))
+
+head(data)
 ```
 
 To inspect whether/how the transformed levels correspond to the original levels, use `codebook = FALSE`:      
