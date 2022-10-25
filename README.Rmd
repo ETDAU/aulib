@@ -143,4 +143,13 @@ cross_validate(data,
 `clean_query()` is a function created by [Tori Oblad](https://stackoverflow.com/a/58446028) that facilitates importing `.sql` queries into R by removing comment lines and line breaks from queries. 
 
 
+## Datasets   
+`aulib` contains metadata documentation as data.   
+
+### `geo_on_er_cd_names`   
+A subset of [data from Statistics Canada](https://www12.statcan.gc.ca/census-recensement/2021/geo/aip-pia/attribute-attribs/index2021-eng.cfm?year=2021) containing economic regions and census divisions of IES catchment areas (`cduid`).   
+
+```{r paged.print=TRUE}
+geo_on_er_cd_names
+```
 
