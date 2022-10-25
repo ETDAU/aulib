@@ -99,7 +99,7 @@ tibble(binary_response = c(sample(c("yes", "no"), 6, replace = TRUE), "YES")) %>
     2 yes                            1
     3 yes                            1
     4 no                             0
-    5 yes                            1
+    5 no                             0
     6 no                             0
     7 YES                            1
 
@@ -141,12 +141,12 @@ head(data)
 ```
 
           x y z xy x_yn y_num
-    1   yes E T 56    1     5
-    2    no A C 92    0     1
-    3   yes B Y 63    1     2
-    4   yes D Z 23    1     4
-    5 maybe A L  8   NA     1
-    6 maybe B N 46   NA     2
+    1 maybe A R  7   NA     1
+    2 maybe E Z 72   NA     5
+    3   yes B Z 13    1     2
+    4 maybe E V  9   NA     5
+    5    no C S 52    0     3
+    6 maybe D N  8   NA     4
 
 To inspect whether/how the transformed levels correspond to the original
 levels, use `codebook = FALSE`:
@@ -201,3 +201,34 @@ cross_validate(data,
 Oblad](https://stackoverflow.com/a/58446028) that facilitates importing
 `.sql` queries into R by removing comment lines and line breaks from
 queries.
+
+## Datasets
+
+`aulib` contains metadata documentation as data.
+
+### `geo_on_er_cd_names`
+
+A subset of [data from Statistics
+Canada](https://www12.statcan.gc.ca/census-recensement/2021/geo/aip-pia/attribute-attribs/index2021-eng.cfm?year=2021)
+containing economic regions and census divisions of IES catchment areas
+(`cduid`).
+
+``` r
+geo_on_er_cd_names
+```
+
+    # A tibble: 50 × 9
+       est_region        est_r…¹ cdname cduid cddgu…² cdtype ernam…³ eruid…⁴ erdgu…⁵
+       <chr>             <chr>   <chr>  <chr> <chr>   <chr>  <chr>   <chr>   <chr>  
+     1 Ottawa            10      Storm… 3501  2021A0… UC     Ottawa  3510    2021S0…
+     2 Ottawa            10      Presc… 3502  2021A0… UC     Ottawa  3510    2021S0…
+     3 Ottawa            10      Ottawa 3506  2021A0… CDR    Ottawa  3510    2021S0…
+     4 Ottawa            10      Leeds… 3507  2021A0… UC     Ottawa  3510    2021S0…
+     5 Ottawa            10      Lanark 3509  2021A0… CTY    Ottawa  3510    2021S0…
+     6 Kingston--Pembro… 4       Front… 3510  2021A0… CTY    Kingst… 3515    2021S0…
+     7 Kingston--Pembro… 4       Lenno… 3511  2021A0… CTY    Kingst… 3515    2021S0…
+     8 Kingston--Pembro… 4       Hasti… 3512  2021A0… CTY    Kingst… 3515    2021S0…
+     9 Kingston--Pembro… 4       Princ… 3513  2021A0… CDR    Kingst… 3515    2021S0…
+    10 Muskoka--Kawarth… 7       North… 3514  2021A0… CTY    Muskok… 3520    2021S0…
+    # … with 40 more rows, and abbreviated variable names ¹​est_region_id,
+    #   ²​cddguid_dridugd, ³​ername_renom, ⁴​eruid_reidu, ⁵​erdguid_reidugd
