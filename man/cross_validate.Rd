@@ -23,7 +23,7 @@ Cross validate categorical coding of transformed variables
 \examples{
 library(dplyr)
 
-# create a fake data set with original columns (x & y) and their transformed columns (x_yn and y_num)
+# create a fake data set
 fake_data =
   data.frame(x = sample(c("yes", "no", "maybe"),
                         100,
