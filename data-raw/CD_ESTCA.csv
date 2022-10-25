@@ -1,0 +1,50 @@
+﻿CDUID,CDNAME,CDTYPE,PRUID,PRNAME,EST_REGION_ID,EST_REGION
+3518,Durham,RM,35,Ontario,1,Durham
+3524,Halton,RM,35,Ontario,2,Halton
+3525,Hamilton,CDR,35,Ontario,3,Hamilton--Niagara Peninsula
+3526,Niagara,RM,35,Ontario,3,Hamilton--Niagara Peninsula
+3528,Haldimand-Norfolk,CDR,35,Ontario,3,Hamilton--Niagara Peninsula
+3529,Brant,CDR,35,Ontario,3,Hamilton--Niagara Peninsula
+3510,Frontenac,CTY,35,Ontario,4,Kingston--Pembroke
+3511,Lennox and Addington,CTY,35,Ontario,4,Kingston--Pembroke
+3512,Hastings,CTY,35,Ontario,4,Kingston--Pembroke
+3513,Prince Edward,CDR,35,Ontario,4,Kingston--Pembroke
+3547,Renfrew,CTY,35,Ontario,4,Kingston--Pembroke
+3522,Dufferin,CTY,35,Ontario,5,Kitchener--Waterloo--Barrie
+3523,Wellington,CTY,35,Ontario,5,Kitchener--Waterloo--Barrie
+3530,Waterloo,RM,35,Ontario,5,Kitchener--Waterloo--Barrie
+3543,Simcoe,CTY,35,Ontario,5,Kitchener--Waterloo--Barrie
+3532,Oxford,CTY,35,Ontario,6,London
+3534,Elgin,CTY,35,Ontario,6,London
+3539,Middlesex,CTY,35,Ontario,6,London
+3514,Northumberland,CTY,35,Ontario,7,Muskoka--Kawarthas
+3515,Peterborough,CTY,35,Ontario,7,Muskoka--Kawarthas
+3516,Kawartha Lakes,CDR,35,Ontario,7,Muskoka--Kawarthas
+3544,Muskoka,DM,35,Ontario,7,Muskoka--Kawarthas
+3546,Haliburton,CTY,35,Ontario,7,Muskoka--Kawarthas
+3548,Nipissing,DIS,35,Ontario,8,Northeast / Nord-est
+3549,Parry Sound,DIS,35,Ontario,8,Northeast / Nord-est
+3551,Manitoulin,DIS,35,Ontario,8,Northeast / Nord-est
+3552,Sudbury,DIS,35,Ontario,8,Northeast / Nord-est
+3553,Greater Sudbury / Grand Sudbury,CDR,35,Ontario,8,Northeast / Nord-est
+3554,Timiskaming,DIS,35,Ontario,8,Northeast / Nord-est
+3556,Cochrane,DIS,35,Ontario,8,Northeast / Nord-est
+3557,Algoma,DIS,35,Ontario,8,Northeast / Nord-est
+3558,Thunder Bay,DIS,35,Ontario,9,Northwest / Nord-ouest
+3559,Rainy River,DIS,35,Ontario,9,Northwest / Nord-ouest
+3560,Kenora,DIS,35,Ontario,9,Northwest / Nord-ouest
+3501,"Stormont, Dundas and Glengarry",UC,35,Ontario,10,Ottawa
+3502,Prescott and Russell,UC,35,Ontario,10,Ottawa
+3506,Ottawa,CDR,35,Ontario,10,Ottawa
+3507,Leeds and Grenville,UC,35,Ontario,10,Ottawa
+3509,Lanark,CTY,35,Ontario,10,Ottawa
+3521,Peel,RM,35,Ontario,11,Peel
+3531,Perth,CTY,35,Ontario,12,Stratford--Bruce Peninsula
+3540,Huron,CTY,35,Ontario,12,Stratford--Bruce Peninsula
+3541,Bruce,CTY,35,Ontario,12,Stratford--Bruce Peninsula
+3542,Grey,CTY,35,Ontario,12,Stratford--Bruce Peninsula
+3520,Toronto,CDR,35,Ontario,13,Toronto
+3536,Chatham-Kent,CDR,35,Ontario,14,Windsor--Sarnia
+3537,Essex,CTY,35,Ontario,14,Windsor--Sarnia
+3538,Lambton,CTY,35,Ontario,14,Windsor--Sarnia
+3519,York,RM,35,Ontario,15,York

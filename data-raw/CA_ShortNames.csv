@@ -1,0 +1,183 @@
+﻿QUESTION_CODE_ID,QUESTION_SHORT_EN,QUESTION_SHORT_ALIAS_EN
+CA1,SIN,SIN
+CA1-1,SAMS_ID,SAMS ID
+CA2,NAME_LABEL,Name Label
+CA2_1,NAME_FIRST,First Name
+CA2_2,NAME_MIDDLE,Middle Name
+CA2_3,NAME_LAST,Last Name
+CA3,DATE_OF_BIRTH,Date of Birth
+CA4,ADDRESS_LABEL,Address Label
+CA4_1,ADDRESS_APT,Apartment
+CA4_2,ADDRESS_STREET_NUM,Street Number
+CA4_3,ADDRESS_STREET_NAME,Street Name
+CA4_4,ADDRESS_CITY,City
+CA4_5,ADDRESS_PROV,Province
+CA4_6,ADDRESS_POSTAL_CODE,Postal Code
+CA4_7,ADDRESS_COUNTRY,Country
+CA5,PHONE_LABEL,Phone Label
+CA5_1,PHONE_PRIMARY,Primary Phone
+CA5_2,PHONE_PRIMARY_EXT,Primary Phone Extension
+CA5_3,PHONE_ALTERNATE,Alternate Phone
+CA5_4,PHONE_ALTERNATE_EXT,Alternate Phone Extension
+CA5_5,PHONE_NONE,No Phone
+CA6,EMAIL_LABEL,Email Label
+CA6_1,EMAIL_ADDRESS,Email Address
+CA6_2,EMAIL_NONE,No Email
+CA7,PREFERRED_LANGUAGE,Preferred Language
+CA10,RESIDENCY_STATUS,Residency Status
+CA10_1,RESIDENCY_STATUS_OTHER,Other Residency Status
+CA108,IMMIG_CLASS,Immigration Class
+CA110,IMMIG_ARRIVAL_LOCAT,Province of Arrival
+CA8,COUNTRY_OF_BIRTH_LABEL,Country of Birth Label
+CA8_1,COUNTRY_OF_BIRTH,Country of Birth
+CA8_2,COUNTRY_OF_BIRTH_PNTA,Prefer Not To Answer Country of Birth
+CA9,ARRIVAL_LABEL,Arrival Date Label
+CA9_1,ARRIVAL_DATE,Arrival Date
+CA9_2,ARRIVAL_PNTA,Prefer Not To Answer Arrival Date
+CA31,MARITAL_STATUS,Marital Status
+CA24,DEPENDENTS_LABEL,Dependents Label
+CA24_1,DEPENDENTS_NUM,Number of Dependents
+CA24_2,DEPENDENTS_PNTA,Prefer Not To Answer Number of Dependents
+CA11,GENDER,Gender
+CA11_1,GENDER_OTHER,Other Gender
+CA12,LGBTQ,LGBTQ
+CA14,FRANCOPHONE,Francophone
+CA13,INDIGENOUS,Indigenous
+CA15,RACE_CATEGORY,Racialized
+CA15_1,RACE_CATEGORY_OTHER,Other Racialized Category
+CA32,EDUCATION_LEVEL,Education Level
+CA33,EDUCATION_ENDDATE,Education End Date 
+CA34,EDUCATION_LOCATION,Education Location
+CA27,LANGUAGE_SKILLS,Language Skills
+CA51,ES_READING,Essential Skills Reading
+CA52,ES_WRITING,Essential Skills Writing
+CA53,ES_COMMUNICATION,Essential Skills Communication
+CA54,ES_NUMERACY,Essential Skills Numeracy
+CA55,ES_DIGITAL,Essential Skills Digital
+CA95,EFFICACY_JOBSEARCH,Job Search Self-Efficacy
+CA96,EFFICACY_CAREER,Career Self-Efficacy
+CA104,EFFICACY_GENERAL,General Self-Efficacy
+CA105,EFFICACY_SERVICES,Service Navigation Self-Efficacy
+CA106,EFFICACY_SUPPORT,Social Support Efficacy
+CA120,DIGITAL_ACCESS,Digital Access
+CA28,TRANSPORT,Reliable Transportation 
+CA25,CARE_RESPONSIBILITY ,Caretaking Responsibilities
+CA26,CARE_HELP,Caretaking Help Needed
+CA20,HOUSING,Housing Situation
+CA21,HOUSING_MOVED,Moved in Past Six Months
+CA22,HOUSING_WORRY,Worry About Moving
+CA23,HOUSING_HELP,Housing Help Needed
+CA101,FOODSECURITY_WORRY,Food Security Worries
+CA102,FOODSECURITY_ISSUE,Food Security Issues
+CA19,FINANCIAL_NEED,Immediate Financial Need
+CA121,PERSONAL_SAFETY,Personal Safety Concerns
+CA111,SUPPORT_MENTALHEALTH,Mental Health Support Needed
+CA112,SUPPORT_SUBSTANCES,Substance Use Support Needed
+CA16,SOI_MAIN,Main Source of Income
+CA16_1,SOI_OTHER,Other Main Source of Income
+CA17,ASSIST_TYPE,Social or Income Assistance in Past Year
+CA17_1,ASSIST_TYPE_OTHER,Other Social or Income Assistance in Past Year
+CA18,ASSIST_TIME_LABEL,Duration Receiving Assistance Label
+CA18_1,ASSIST_TIME_WEEK,Number of Weeks Receiving Assistance
+CA18_2,ASSIST_TIME_MONTH,Number of Months Receiving Assistance
+CA56,FILTER_SENSORY,Sensory Difficulties 
+CA57,SEE_AID,Seeing Aid
+CA58_T_1,SEE_ABILITY_ONE,Seeing Difficulty with Aid
+CA58_T_2,SEE_ABILITY_TWO,Seeing Difficulty 
+CA59_T_1,SEE_LIMIT_ONE,Limits Due to Seeing Difficulty
+CA59_T_2,SEE_LIMIT_TWO,Limits Due to Seeing Condition
+CA60,HEAR_AID,Hearing Aid
+CA61_T_1,HEAR_ABILITY_ONE,Hearing Difficulty 
+CA61_T_2,HEAR_ABILITY_TWO,Hearing Difficulty with Aid
+CA62_T_1,HEAR_LIMIT_ONE,Limits Due to Hearing Difficulty
+CA62_T_2,HEAR_LIMIT_TWO,Limits Due to Hearing Condition
+CA63,FILTER_PHYSICAL,Physical Difficulties
+CA64,MOBIL_ABILITY_WALK,Mobility Difficulties Walking
+CA65,MOBIL_ABILITY_STAIR,Mobility Difficulties on Stairs
+CA66_T_1,MOBIL_LIMIT_ONE,Limits Due to Mobility Walking
+CA66_T_2,MOBIL_LIMIT_TWO,Limits Due to Mobility on Stairs
+CA66_T_3,MOBIL_LIMIT_THREE,Limits Due to Mobility Difficulties
+CA67,FLEX_ABILITY_BEND,Flexibility Difficulties Bending 
+CA68,FLEX_ABILITY_REACH,Flexibility Difficulties Reaching
+CA69_T_1,FLEX_LIMIT_ONE,Limits Due to Flexibility Bending 
+CA69_T_2,FLEX_LIMIT_TWO,Limits Due to Flexibility Reaching
+CA69_T_3,FLEX_LIMIT_THREE,Limits Due to Flexibility Difficulties 
+CA70,DEXT_ABILITY,Dexterity Difficulty
+CA71,DEXT_LIMIT,Limits Due to Dexterity
+CA72,FILTER_COGNITIVE,Cognitive Difficulties 
+CA73,LEARN_YOU,Self-Reported Learning Condition
+CA74,LEARN_OTHERS,Other-Reported Learning Disability
+CA75,LEARN_LIMIT,Limits Due to Learning Condition
+CA76,LEARN_ABILITY,Difficulty Due to Learning Condition
+CA77,DEVELOPMENT,Developmental Disability
+CA78,DEVELOPMENT_LIMIT,Limits Due to Developmental Condition
+CA79,DEVELOPMENT_ABILITY,Difficulty Due to Developmental Condition
+CA80,MEMORY,Memory Problems
+CA81,MEMORY_LIMIT,Limits Due to Memory Problems
+CA82,MEMORY_ABILITY,Difficulty Due to Memory Problems
+CA83,FILTER_MENTALHEALTH,Mental Health Conditions
+CA84,MENTALHEALTH_LIMIT,Limits Due to Mental Health Condition
+CA85,MENTALHEALTH_ABILITY,Difficulty Due to Mental Health Condition
+CA86,FILTER_OTHER,Other Health Conditions
+CA87,OTHER_LIMIT,Limits Due to Other Condition
+CA88,PAIN_ALWAYS,Constant Pain
+CA89_T_1,PAIN_REOCCUR_ONE,Reoccurring Pain
+CA89_T_2,PAIN_REOCCUR_TWO,Reoccurring Pain Too
+CA90,PAIN_LIMIT,Limits Due to Pain
+CA91,PAIN_ABILITY,Difficulty Due to Pain
+CA29,CRIME,Criminal Record
+CA30,CRIME_JOB_DIFFICULT,Job Difficulties Due to Criminal Record
+CA41,STUDENT,Attending School
+CA42,STUDENT_TYPE,Type of Educational Institution
+CA42_1,STUDENT_TYPE_OTHER,Other Type of Education Institution
+CA43,STUDENT_FULLPART,Full or Part Time Student
+CA35,WORK_EMPLOYED,Employed
+CA122,WORK_NUM_LABEL,Number of Jobs Label
+CA122_1,WORK_NUM,Number of Jobs
+CA36,WORK_TYPE,Type of Employment
+CA37,WORK_NATURE,Nature of Job
+CA37_1,WORK_NATURE_OTHER,Other Type of Nature of Job
+CA38,WORK_HOUR_CUR_LABEL,Weekly Hours in Current Job Label
+CA38_1,WORK_HOUR_CUR,Weekly Hours in Current Job
+CA38_2,WORK_HOUR_CUR_NS,Not Sure About Weekly Hours in Current Job
+CA39,NA,NA
+CA40,WORK_WAGE_CUR_LABEL,Hourly Wage in Current Job Label
+CA40_1,WORK_WAGE_CUR,Hourly Wage in Current Job
+CA40_2,WORK_WAGE_CUR_PNTA,Prefer Not To Answer Hourly Wage in Current Job
+CA107,WORK_PRECARIOUS,Precarious Work
+CA44,WORK_UNEMPLOYED,Not Working Situation
+CA109,WORK_UNEMPL_REASON,Reason for Job Separation
+CA109_1,WORK_UNEMPL_REASON_OTHER,Other Reason for Job Separation
+CA45,WORK_UNEMPL_TIME_LABEL,Duration Since Last Job Label
+CA45_1,WORK_UNEMPL_TIME_WEEK,Weeks Since Last Job
+CA45_2,WORK_UNEMPL_TIME_MONTH,Months Since Last Job
+CA45_3,WORK_UNEMPL_TIME_NEVER,Never Worked Before for Duration Since Last Job
+CA46,WORK_HOUR_PAST_LABEL,Weekly Hours in Most Recent Job Label
+CA46_1,WORK_HOUR_PAST,Weekly Hours in Most Recent Job
+CA46_2,WORK_HOUR_PAST_NS,Not Sure about Weekly Hours in Most Recent Job
+CA47,NA,NA
+CA48,WORK_WAGE_PAST_LABEL,Hourly Wage in Most Recent Job Label
+CA48_1,WORK_WAGE_PAST,Hourly Wage in Most Recent Job
+CA48_2,WORK_WAGE_PAST_PNTA,Prefer Not To Answer Hourly Wage in Most Recent Job
+CA49_T_1,WORK_TIME_CUR_LABEL,Duration in Current Job Label
+CA49_T_1_1,WORK_TIME_CUR_WEEK,Weeks in Current Job
+CA49_T_1_2,WORK_TIME_CUR_MONTH,Months in Current Job
+CA49_T_2,WORK_TIME_PAST_LABEL,Duration in Most Recent Job Label
+CA49_T_2_1,WORK_TIME_PAST_WEEK,Weeks in Most Recent Job
+CA49_T_2_2,WORK_TIME_PAST_MONTH,Months in Most Recent Job
+CA50_T_1,WORK_NOC_PAST,Most Recent Occupation
+CA50_T_2,WORK_NOC_CURRENT,Current Job Occupation
+CA103,WORK_EXP_LOCATION,Work Experience in Canada
+CA92,WORK_PERCEPT_UNCONTROL,Job Search Perceived as Uncontrollable
+CA93,WORK_PERCEPT_IMPORTANCE,Perception that Any Job is Better than Unemployent
+CA94,WORK_ABILITY,Ability to Work
+CA97,WORK_GOAL_NOC_LABEL,Occupation Goal Label
+CA97_1,WORK_GOAL_NOC,Occupation Goal
+CA97_2,WORK_GOAL_NOC_NS,Not Sure about Occupation Goal
+CA98,WORK_GOAL_HOUR_LABEL,Weekly Hours Goal Label
+CA98_1,WORK_GOAL_HOUR,Weekly Hours Goal
+CA98_2,WORK_GOAL_HOUR_NS,Not Sure about Weekly Hours Goal
+CA99,NA,NA
+CA100,WORK_GOAL_WAGE_LABEL,Hourly Wage Goal Label
+CA100_1,WORK_GOAL_WAGE,Hourly Wage Goal
+CA100_2,WORK_GOAL_WAGE_PNTA,Prefer Not To Answer Hourly Wage Goal
