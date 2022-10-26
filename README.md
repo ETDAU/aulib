@@ -95,10 +95,10 @@ tibble(binary_response = c(sample(c("yes", "no"), 6, replace = TRUE), "YES")) %>
     # A tibble: 7 × 2
       binary_response numeric_response
       <chr>                      <int>
-    1 yes                            1
-    2 yes                            1
-    3 yes                            1
-    4 no                             0
+    1 no                             0
+    2 no                             0
+    3 no                             0
+    4 yes                            1
     5 no                             0
     6 no                             0
     7 YES                            1
@@ -140,13 +140,13 @@ data =
 head(data)
 ```
 
-          x y z xy x_yn y_num
-    1 maybe A R  7   NA     1
-    2 maybe E Z 72   NA     5
-    3   yes B Z 13    1     2
-    4 maybe E V  9   NA     5
-    5    no C S 52    0     3
-    6 maybe D N  8   NA     4
+          x y z  xy x_yn y_num
+    1   yes B P  43    1     2
+    2 maybe D G  69   NA     4
+    3   yes A H 100    1     1
+    4 maybe E Z  45   NA     5
+    5 maybe E S  12   NA     5
+    6   yes E X  36    1     5
 
 To inspect whether/how the transformed levels correspond to the original
 levels, use `codebook = FALSE`:
@@ -193,7 +193,7 @@ cross_validate(data,
     2 x_yn     0 = no, 1 = yes, maybe                                               
     3 y        A, B, C, D, E                                                        
     4 y_num    1 = A, 2 = B, 3 = C, 4 = D, 5 = E                                    
-    5 z        A, B, C, D, E, F, G, H, I, J, K, L, M, N, O, P, Q, R, S, T, U, V, W,…
+    5 z        A, B, C, D, E, F, G, H, I, J, K, L, M, O, P, Q, R, S, T, U, V, W, X,…
 
 ### `clean_query()`
 
@@ -232,3 +232,9 @@ geo_on_er_cd_names
     10 Muskoka--Kawarth… 7       North… 3514  2021A0… CTY    Muskok… 3520    2021S0…
     # … with 40 more rows, and abbreviated variable names ¹​est_region_id,
     #   ²​cddguid_dridugd, ³​ername_renom, ⁴​eruid_reidu, ⁵​erdguid_reidugd
+
+## `ca_doc`
+
+Documentation containing metadata of CA data and information about
+Common Assessment questions. This is useful for manipulating and
+transforming CA data (e.g., pivoting into a wide-format).
