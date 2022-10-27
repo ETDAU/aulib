@@ -29,7 +29,7 @@
 #' \describe{
 #' \item{QUESTION_SHORT_EN}{Computer-friendly name of CA questions}
 #' \item{QUESTION_SHORT_ALIAS_EN}{Human-friendly CA questions}
-#' \item{MODULE_SEQUENCE}{}
+#' \item{MODULE_SEQUENCE}{The order in which modules in CA appear}
 #' \item{GROUP_SEQUENCE}{}
 #' \item{QUESTION_SEQUENCE}{}
 #' \item{EST_CA_TEMPLATE_ID}{}
