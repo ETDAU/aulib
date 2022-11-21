@@ -31,8 +31,14 @@ au_minimal_theme = function() {
     panel.grid = element_blank(),
     panel.grid.minor = element_blank(),
 
-    #legend
+    # legend
     legend.position = "top",
+    legend.text = element_text(size = 12),
+
+    # facet wrap
+    strip.text.x = element_text(size = 12),
+    strip.text.y = element_text(size = 12),
+    strip.background = element_rect("grey")
 
   )
 }
