@@ -99,7 +99,7 @@ tibble(binary_response = c(sample(c("yes", "no"), 6, replace = TRUE), "YES")) %>
     2 no                             0
     3 no                             0
     4 yes                            1
-    5 no                             0
+    5 yes                            1
     6 no                             0
     7 YES                            1
 
@@ -140,13 +140,13 @@ data =
 head(data)
 ```
 
-          x y z  xy x_yn y_num
-    1   yes B P  43    1     2
-    2 maybe D G  69   NA     4
-    3   yes A H 100    1     1
-    4 maybe E Z  45   NA     5
-    5 maybe E S  12   NA     5
-    6   yes E X  36    1     5
+          x y z xy x_yn y_num
+    1 maybe B Z 47   NA     2
+    2    no D F 61    0     4
+    3   yes C F 63    1     3
+    4    no E Q  4    0     5
+    5   yes E L 52    1     5
+    6 maybe A T 77   NA     1
 
 To inspect whether/how the transformed levels correspond to the original
 levels, use `codebook = FALSE`:
@@ -193,7 +193,7 @@ cross_validate(data,
     2 x_yn     0 = no, 1 = yes, maybe                                               
     3 y        A, B, C, D, E                                                        
     4 y_num    1 = A, 2 = B, 3 = C, 4 = D, 5 = E                                    
-    5 z        A, B, C, D, E, F, G, H, I, J, K, L, M, O, P, Q, R, S, T, U, V, W, X,…
+    5 z        A, B, C, D, E, F, G, H, I, K, L, M, N, O, P, Q, R, S, T, U, V, X, Y,…
 
 ### `clean_query()`
 
