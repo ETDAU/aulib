@@ -13,6 +13,30 @@ Or, a source package using `devtools::install_github()`
 
     devtools::install_github("https://github.com/ETDAU/aulib/releases/tag/v0.0.0.9000")
 
+### Installing from local directory
+
+For those with access to `ETDAU` github repo, try installing from a
+local directory:
+
+``` r
+install.packages(
+  "C:/path to aulib folder", 
+  repos = NULL, 
+  type = "source"
+  )
+```
+
+Alternatively, follow the steps below:  
+1. Download the repo ![](Fig/download_repo.png)
+
+2.  Unzip the `aulib-main.zip` file
+
+3.  Install using `devtools::install()` Make sure to change the path
+
+``` r
+devtools::install("C:\Users\your_name\Downloads\aulib-main")
+```
+
 ## Functions
 
 ### `au_palette()`
@@ -40,7 +64,7 @@ tibble(w = sample(LETTERS[1:6], size = 100, replace = T)) %>%
   theme_classic()
 ```
 
-![](README_files/figure-gfm/unnamed-chunk-1-1.png)<!-- -->
+![](README_files/figure-gfm/unnamed-chunk-3-1.png)<!-- -->
 
 You can use both `ops` and `au` palettes by leaving the argument empty:
 `au_palette()`.
@@ -95,12 +119,12 @@ tibble(binary_response = c(sample(c("yes", "no"), 6, replace = TRUE), "YES")) %>
     # A tibble: 7 × 2
       binary_response numeric_response
       <chr>                      <int>
-    1 no                             0
+    1 yes                            1
     2 no                             0
     3 no                             0
     4 yes                            1
-    5 yes                            1
-    6 no                             0
+    5 no                             0
+    6 yes                            1
     7 YES                            1
 
 ### `cross_validate()`
@@ -141,12 +165,12 @@ head(data)
 ```
 
           x y z xy x_yn y_num
-    1 maybe B Z 47   NA     2
-    2    no D F 61    0     4
-    3   yes C F 63    1     3
-    4    no E Q  4    0     5
-    5   yes E L 52    1     5
-    6 maybe A T 77   NA     1
+    1 maybe C Z 36   NA     3
+    2   yes D X 24    1     4
+    3 maybe E Y 55   NA     5
+    4 maybe B B 39   NA     2
+    5   yes E S 12    1     5
+    6    no B G 28    0     2
 
 To inspect whether/how the transformed levels correspond to the original
 levels, use `codebook = FALSE`:
@@ -193,7 +217,7 @@ cross_validate(data,
     2 x_yn     0 = no, 1 = yes, maybe                                               
     3 y        A, B, C, D, E                                                        
     4 y_num    1 = A, 2 = B, 3 = C, 4 = D, 5 = E                                    
-    5 z        A, B, C, D, E, F, G, H, I, K, L, M, N, O, P, Q, R, S, T, U, V, X, Y,…
+    5 z        A, B, C, D, E, F, G, H, I, J, K, L, M, N, O, P, R, S, T, U, V, W, X,…
 
 ### `clean_query()`
 

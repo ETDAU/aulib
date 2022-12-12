@@ -26,6 +26,30 @@ Or, a source package using `devtools::install_github()`
 devtools::install_github("https://github.com/ETDAU/aulib/releases/tag/v0.0.0.9000")
 ```
 
+### Installing from local directory   
+
+For those with access to `ETDAU` github repo, try installing from a local directory:
+```{r eval = FALSE}
+install.packages(
+  "C:/path to aulib folder", 
+  repos = NULL, 
+  type = "source"
+  )
+```
+
+
+Alternatively, follow the steps below:   
+1. Download the repo
+![](Fig/download_repo.png)   
+
+2. Unzip the `aulib-main.zip` file
+
+3. Install using `devtools::install()`
+Make sure to change the path
+
+```{r eval = FALSE}
+devtools::install("C:\Users\your_name\Downloads\aulib-main")
+```
 
 ## Functions   
 
