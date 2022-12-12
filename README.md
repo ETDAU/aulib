@@ -1,7 +1,7 @@
 The AU’s library of R functions
 ================
 
-R package for MLITSD’s Analytics Units.
+R package for MLITSD’s [Analytics Unit](https://intra.infogo.gov.on.ca/infogo/home.html#orgProfile/113819/en).
 
 ## Installation
 
@@ -43,7 +43,7 @@ devtools::install("C:\Users\your_name\Downloads\aulib-main")
 
 `au_palette()` provides a palette of accessible colours that are
 recommended by the [OPS](https://intra.ontario.ca/tbs/ontario-logo)
-(`palette = "ops"`) and are commonly used in the analytics units
+(`palette = "ops"`) and are commonly used by the Analytics Unit
 (`palette = "au"`).
 
 ``` r
