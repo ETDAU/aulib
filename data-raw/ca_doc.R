@@ -26,7 +26,18 @@ ca_doc =
   select(QUESTION_SHORT_EN, QUESTION_SHORT_ALIAS_EN,
          tidyselect::everything())
 
+ca_doc =
+  ca_doc %>%
+  dplyr::rename_all(
+    tolower
+  ) %>%
+  mutate(
+    question_short_en = tolower(question_short_en)
+  )
+
 ## code to prepare `ca_doc` dataset goes here
 
-usethis::use_data(ca_doc,
-                  overwrite = TRUE)
+usethis::use_data(
+  ca_doc,
+  overwrite = TRUE
+  )
