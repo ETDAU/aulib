@@ -28,11 +28,11 @@ ca_doc =
 
 ca_doc =
   ca_doc %>%
-  dplyr::rename_all(
-    tolower
-  ) %>%
+  # dplyr::rename_all(
+  #   tolower
+  # ) %>%
   mutate(
-    question_short_en = tolower(question_short_en)
+    QUESTION_SHORT_EN = tolower(QUESTION_SHORT_EN)
   )
 
 ## code to prepare `ca_doc` dataset goes here
