@@ -56,3 +56,17 @@
 #' @examples
 #'   ca_doc
 "ca_doc"
+
+#' Geographical reference table
+#'
+#' Reference table for mapping `geo_uid` from StatCan data to EST catchment areas and economic regions
+#' @format ## `geo_ref`
+#' A table with 16 rows and 4 columns:
+#' \describe{
+#'  \item{catchment_id}{Catchment ID}
+#'  \item{catchment_area}{EST catchment area name}
+#'  \item{geo_uid}{StatCan's geographical region ID}
+#'  \item{economic_region}{Economic region}
+#' }
+#' @source Analytics Unit > Projects > EST > Catchment Areas > 2021 Provincial Rollout > Geo_Reference.xlsx
+"geo_ref"
