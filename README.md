@@ -1,7 +1,7 @@
 The AU’s library of R functions
 ================
 
-R package for MLITSD’s [Analytics Unit](https://intra.infogo.gov.on.ca/infogo/home.html#orgProfile/113819/en).
+R package for MLITSD’s Analytics Units.
 
 ## Installation
 
@@ -43,7 +43,7 @@ devtools::install("C:\Users\your_name\Downloads\aulib-main")
 
 `au_palette()` provides a palette of accessible colours that are
 recommended by the [OPS](https://intra.ontario.ca/tbs/ontario-logo)
-(`palette = "ops"`) and are commonly used by the Analytics Unit
+(`palette = "ops"`) and are commonly used in the analytics units
 (`palette = "au"`).
 
 ``` r
@@ -120,11 +120,11 @@ tibble(binary_response = c(sample(c("yes", "no"), 6, replace = TRUE), "YES")) %>
       binary_response numeric_response
       <chr>                      <int>
     1 yes                            1
-    2 no                             0
+    2 yes                            1
     3 no                             0
-    4 yes                            1
-    5 no                             0
-    6 yes                            1
+    4 no                             0
+    5 yes                            1
+    6 no                             0
     7 YES                            1
 
 ### `cross_validate()`
@@ -164,13 +164,13 @@ data =
 head(data)
 ```
 
-          x y z xy x_yn y_num
-    1 maybe C Z 36   NA     3
-    2   yes D X 24    1     4
-    3 maybe E Y 55   NA     5
-    4 maybe B B 39   NA     2
-    5   yes E S 12    1     5
-    6    no B G 28    0     2
+        x y z xy x_yn y_num
+    1  no E S 49    0     5
+    2 yes C K 15    1     3
+    3 yes D W  5    1     4
+    4 yes D V 98    1     4
+    5 yes C X  9    1     3
+    6  no E E 20    0     5
 
 To inspect whether/how the transformed levels correspond to the original
 levels, use `codebook = FALSE`:
@@ -217,7 +217,7 @@ cross_validate(data,
     2 x_yn     0 = no, 1 = yes, maybe                                               
     3 y        A, B, C, D, E                                                        
     4 y_num    1 = A, 2 = B, 3 = C, 4 = D, 5 = E                                    
-    5 z        A, B, C, D, E, F, G, H, I, J, K, L, M, N, O, P, R, S, T, U, V, W, X,…
+    5 z        A, B, C, D, E, F, G, H, I, J, K, L, M, N, O, P, Q, R, S, T, U, V, W,…
 
 ### `clean_query()`
 
@@ -242,23 +242,27 @@ geo_on_er_cd_names
 ```
 
     # A tibble: 50 × 9
-       est_region        est_r…¹ cdname cduid cddgu…² cdtype ernam…³ eruid…⁴ erdgu…⁵
-       <chr>             <chr>   <chr>  <chr> <chr>   <chr>  <chr>   <chr>   <chr>  
-     1 Ottawa            10      Storm… 3501  2021A0… UC     Ottawa  3510    2021S0…
-     2 Ottawa            10      Presc… 3502  2021A0… UC     Ottawa  3510    2021S0…
-     3 Ottawa            10      Ottawa 3506  2021A0… CDR    Ottawa  3510    2021S0…
-     4 Ottawa            10      Leeds… 3507  2021A0… UC     Ottawa  3510    2021S0…
-     5 Ottawa            10      Lanark 3509  2021A0… CTY    Ottawa  3510    2021S0…
-     6 Kingston--Pembro… 4       Front… 3510  2021A0… CTY    Kingst… 3515    2021S0…
-     7 Kingston--Pembro… 4       Lenno… 3511  2021A0… CTY    Kingst… 3515    2021S0…
-     8 Kingston--Pembro… 4       Hasti… 3512  2021A0… CTY    Kingst… 3515    2021S0…
-     9 Kingston--Pembro… 4       Princ… 3513  2021A0… CDR    Kingst… 3515    2021S0…
-    10 Muskoka--Kawarth… 7       North… 3514  2021A0… CTY    Muskok… 3520    2021S0…
-    # … with 40 more rows, and abbreviated variable names ¹​est_region_id,
-    #   ²​cddguid_dridugd, ³​ername_renom, ⁴​eruid_reidu, ⁵​erdguid_reidugd
+       est_region     est_region_id cdname cduid cddguid_dridugd cdtype ername_renom
+       <chr>          <chr>         <chr>  <chr> <chr>           <chr>  <chr>       
+     1 Ottawa         10            Storm… 3501  2021A00033501   UC     Ottawa      
+     2 Ottawa         10            Presc… 3502  2021A00033502   UC     Ottawa      
+     3 Ottawa         10            Ottawa 3506  2021A00033506   CDR    Ottawa      
+     4 Ottawa         10            Leeds… 3507  2021A00033507   UC     Ottawa      
+     5 Ottawa         10            Lanark 3509  2021A00033509   CTY    Ottawa      
+     6 Kingston--Pem… 4             Front… 3510  2021A00033510   CTY    Kingston--P…
+     7 Kingston--Pem… 4             Lenno… 3511  2021A00033511   CTY    Kingston--P…
+     8 Kingston--Pem… 4             Hasti… 3512  2021A00033512   CTY    Kingston--P…
+     9 Kingston--Pem… 4             Princ… 3513  2021A00033513   CDR    Kingston--P…
+    10 Muskoka--Kawa… 7             North… 3514  2021A00033514   CTY    Muskoka--Ka…
+    # ℹ 40 more rows
+    # ℹ 2 more variables: eruid_reidu <chr>, erdguid_reidugd <chr>
 
-## `ca_doc`
+### `ca_doc`
 
 Documentation containing metadata of CA data and information about
 Common Assessment questions. This is useful for manipulating and
 transforming CA data (e.g., pivoting into a wide-format).
+
+### `noc_2021`
+
+2021 NOC codes, corresponding job titles, skill levels, and TEER.
