@@ -73,7 +73,7 @@
 
 #' NOC 2021 Table
 #'
-#' Translation table for 2021 NOC codes created by @mpane
+#' Translation table for 2021 NOC codes
 #'
 #' @format A data frame with x rows and y column(s)
 #' \describe{
