@@ -29,6 +29,6 @@ A data frame with x rows and y column(s)
 noc_2021
 }
 \description{
-Translation table for 2021 NOC codes created by @mpane
+Translation table for 2021 NOC codes
 }
 \keyword{datasets}

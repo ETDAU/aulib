@@ -93,3 +93,18 @@
 #' }
 #' @source \url{https://github.com/ETDAU/trf-analysis/blob/8ea37620771743fa7b05561e4dd268bd8cec6e34/NOC_NAICS_Processing_Srcript.Rmd/"}
 "noc_2021"
+
+
+
+#' EST Catchment Areas by Phase
+#'
+#' Reference table of EST catchment areas and their phase and SSMs
+#' @format ## `est_catchment`
+#' A table with 16 rows and 4 columns:
+#' \describe{
+#'  \item{catchment}{EST catchment area name}
+#'  \item{phase}{Phase of transformation}
+#'  \item{SSM}{SSM in corresponding catchment area}
+#' }
+#' @source Analytics Unit > Projects > EST > Catchment Areas
+"est_catchment"
